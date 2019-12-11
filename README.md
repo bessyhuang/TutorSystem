@@ -47,4 +47,6 @@ $ cd TutorSystem
 $ python manage.py runserver
 ```
 
-## Go to http://127.0.0.1:8000/admin adding questions (including question materials)
+## Go to http://127.0.0.1:8000/admin
+
+* Adding questions (including questions' title, content and files)
