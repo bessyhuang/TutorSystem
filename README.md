@@ -12,13 +12,13 @@ $ python3 -m venv <your_venv>
 * Windows
 
   `
-  $ .\venv\Scripts\activate
+  $ .\<your_venv>\Scripts\activate
   `
 
 * Linux / macOS
 
   `
-  $ source ./venv/bin/activate
+  $ source ./<your_venv>/bin/activate
   `
 
 ## Install packages
