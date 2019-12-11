@@ -11,15 +11,15 @@ $ python3 -m venv <your_venv>
 
 * Windows
 
-`
-$ .\venv\Scripts\activate
-`
+  `
+  $ .\venv\Scripts\activate
+  `
 
 * Linux / macOS
 
-`
-$ source ./venv/bin/activate
-`
+  `
+  $ source ./venv/bin/activate
+  `
 
 ## Install packages
 
@@ -29,8 +29,7 @@ $ pip install -r requirements.txt
 
 ## Run TutorSystem
 
-`
+```
 $ cd TutorSystem
-
 $ python manage.py runserver
-`
+```
