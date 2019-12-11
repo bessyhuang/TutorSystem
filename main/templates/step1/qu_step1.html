@@ -1,0 +1,24 @@
+{% extends "main/base.html" %}
+{% block heading %}題目 --- {{ qu_title }}{% endblock %}
+
+{% block content %}	
+<h3>Step1：</h3>
+
+<!-- 使用者輸入 -->
+<form action="/step1/qu_step1/" method="post" id="myForm">
+  {% csrf_token %}
+  <input type="text" id="final_user_input" name="user_input" value="" />
+  <button type="button" onclick="submit()" class="btn btn-warning">OK</button>
+</form>
+  <table>
+		<tr><th>Query text: </th><th style="color:orange;">{{ s1_lastone.user_input_text }}</th></tr>
+
+    	<tr><th>Detected intent: </th><th style="color:red;">{{ s1_lastone.detected_intent }}</th></tr>
+
+    	<tr><th>Detected intent confidence: </th><th>{{ s1_lastone.detected_intent_confidence }}</th></tr>
+
+    	<tr><th>Fulfillment text: </th><th style="color:blue;">{{ s1_lastone.chatbot_output_text }}</th></tr>
+
+    	<tr><th>Submit timestamp: </th><th>{{ s1_lastone.timestamp }}</th></tr>
+</table>
+{% endblock %}

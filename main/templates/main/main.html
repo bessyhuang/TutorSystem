@@ -1,0 +1,27 @@
+{% extends "main/base.html" %}
+{% block heading %}--- 首頁 ---{% endblock %}
+
+{% block content %}
+	<!-- 
+		<div class="alert alert-primary" role="alert"> 淡藍	</div>
+		<div class="alert alert-secondary" role="alert"> 灰 </div>
+		<div class="alert alert-success" role="alert"> 綠 </div>
+		<div class="alert alert-danger" role="alert"> 紅 </div>
+		<div class="alert alert-warning" role="alert"> 橘 </div>
+		<div class="alert alert-info" role="alert"> 暗藍 </div>
+		<div class="alert alert-light" role="alert"> 白 </div>
+		<div class="alert alert-dark" role="alert"> 深灰 </div>
+
+	-->
+	{% if messages %}
+	<div>
+	    {% for message in messages %}
+	    <div{% if message.tags %} class="alert-primary alert"{% endif %}>{{ message }} {{ message.tags }}</div>
+	    {% endfor %}
+	</div>
+	{% endif %}
+
+	<h1>--- 首頁 ---</h1>
+	<h2>Django 說 -- Hello world!</h2>
+	<p>{{ like }}</p>
+{% endblock %}
