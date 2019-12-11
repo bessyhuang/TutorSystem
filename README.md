@@ -3,9 +3,9 @@ A conversation collection system build with Django framework and integrate Googl
 
 ## Creating a virtual environment
 
-`
+```
 $ python3 -m venv <your_venv>
-`
+```
 
 ## Activate your virtual environment
 
@@ -23,9 +23,9 @@ $ python3 -m venv <your_venv>
 
 ## Install packages
 
-`
+```
 $ pip install -r requirements.txt
-`
+```
 
 ## Run TutorSystem
 
