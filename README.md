@@ -10,11 +10,13 @@ $ python3 -m venv <your_venv>
 ## Activate your virtual environment
 
 * Windows
+
 `
 $ .\venv\Scripts\activate
 `
 
 * Linux / macOS
+
 `
 $ source ./venv/bin/activate
 `
@@ -29,5 +31,6 @@ $ pip install -r requirements.txt
 
 `
 $ cd TutorSystem
+
 $ python manage.py runserver
 `
