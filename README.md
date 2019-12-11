@@ -34,6 +34,12 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
+## Create superuser
+
+```
+$ python manage.py createsuperuser
+```
+
 ## Run TutorSystem
 
 ```

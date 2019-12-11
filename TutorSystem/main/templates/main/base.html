@@ -19,6 +19,8 @@
 		<li><a href="{% url 'account:register' %}">註冊</a></li>
 		<li><a href="{% url 'account:login' %}">登入</a></li>
 	{% endif %}
+	
+		<li><a href="{% url 'question:qu_listSelect' %}">題目選擇</a></li>
 	</ul>
 
 	{% block content %}{% endblock %}

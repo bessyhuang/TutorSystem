@@ -29,6 +29,7 @@ def login(request):
 
     # POST
     username = request.POST.get('username')
+    #print(username)
     password = request.POST.get('password')
     if not username or not password:    # Server-side validation
         messages.error(request, '請填資料')
