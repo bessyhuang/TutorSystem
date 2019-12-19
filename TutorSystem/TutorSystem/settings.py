@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 	'account',
 	'question',
     'step1',
+    'step2',
+    'step3',
 ]
 
 MIDDLEWARE = [

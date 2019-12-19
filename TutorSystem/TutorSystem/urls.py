@@ -30,6 +30,8 @@ urlpatterns = [
 	path('account/', include('account.urls', namespace='account')),
 	path('question/', include('question.urls', namespace='question')),
 	path('step1/', include('step1.urls', namespace='step1')),
+    path('step2/', include('step2.urls', namespace='step2')),
+    path('step3/', include('step3.urls', namespace='step3')),
 
 	#re_path('.*', views.main),
 ]
