@@ -1,0 +1,22 @@
+{% extends "main/base.html" %}
+{% block heading %}題目 --- {{ qu_title }} 【File Upload】 {% endblock %}
+
+{% block content %} 
+<div class="jumbotron">
+<h1 class="display-5">Upload File</h1>
+<hr class="my-3">
+	<div class="form-group">
+	  	<form method="post" enctype="multipart/form-data">
+	  		{% csrf_token %}
+	  		{{ form.as_p }}
+			<button type="submit" class="btn btn-warning mb-2">Upload</button>
+		</form>
+		<!-- <p><a href="{% url 'file_upload' %}">Return to file_upload</a></p> -->
+		{% if messages %}
+			{% for m in messages %}
+				{{ m }}
+			{% endfor %}
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

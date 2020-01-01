@@ -13,16 +13,17 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Qu_list',
+            name='File_Upload',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=128, unique=True)),
-                ('content', models.TextField()),
-                ('files', models.FileField(upload_to='files_download/')),
-                ('pub_date', models.DateTimeField(default=django.utils.timezone.now)),
+                ('title', models.CharField(max_length=200)),
+                ('slug', models.CharField(max_length=200)),
+                ('body', models.TextField()),
+                ('upload_date', models.DateTimeField(default=django.utils.timezone.now)),
+                ('upload_files', models.FileField(blank=True, upload_to='files_upload/')),
             ],
             options={
-                'ordering': ('-pub_date',),
+                'ordering': ('-upload_date',),
             },
         ),
     ]

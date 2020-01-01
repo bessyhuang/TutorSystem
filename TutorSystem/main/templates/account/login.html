@@ -2,6 +2,16 @@
 {% block heading %}登入{% endblock %}
 
 {% block content %}
+
+	{% if messages %}
+	<div>
+	    {% for message in messages %}
+	    <div{% if message.tags %} class="alert-primary alert"{% endif %}>{{ message }} {{ message.tags }}</div>
+	    {% endfor %}
+	</div>
+	{% endif %}
+
+
 <form method="post" action="{% url 'account:login' %}">
   {% csrf_token %}
   <p>使用者名稱：<input type="text" name="username"></p>
