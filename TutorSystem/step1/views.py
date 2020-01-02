@@ -10,10 +10,10 @@ from django.conf import settings
 import os
 import uuid
 
-DFA_PROJECT_ID = 'newagent-2-wibrbo'
+DFA_PROJECT_ID = 'one-agent-ycrmtd'
 DFA_LANGUAGE = 'zh-TW'
 DFA_SESSION_ID = uuid.uuid1()
-DFA_JSON_DIR = os.path.join(settings.BASE_DIR, 'DialogflowAgent', 'NewAgent-2-ee2c103ca357.json')
+DFA_JSON_DIR = os.path.join(settings.BASE_DIR, 'DialogflowAgent', 'One-Agent-b949d85b4e41.json')
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = DFA_JSON_DIR
 
 def qu_step1(request):
