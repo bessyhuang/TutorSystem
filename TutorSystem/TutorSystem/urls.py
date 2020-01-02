@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 from main import views
 from account import views
 from question import views
-from upload import views  ### 新增 ###
+from upload.views import file_upload_view  ### 新增 ###
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -35,7 +35,7 @@ urlpatterns = [
 	path('question/', include('question.urls', namespace='question')),
 	path('step1/', include('step1.urls', namespace='step1')),
 
-    path('upload/', include('upload.urls'), name='upload'),   ### 新增 ###
+    path('file_upload/', file_upload_view, name='file_upload'),   ### 新增 ###
 
 	#re_path('.*', views.main),
 ]

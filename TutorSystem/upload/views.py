@@ -1,6 +1,5 @@
-from django.http import HttpResponse 
 from django.shortcuts import render, redirect 
-from .forms import *
+from upload.forms import *
 from django.contrib import messages
 # Create your views here.
 
@@ -9,12 +8,17 @@ from django.contrib import messages
 #https://www.youtube.com/watch?v=AkkBc_d7OXk
 
 def file_upload_view(request):
-    if request.method == 'POST': 
-        form = File_UploadForm(request.POST, request.FILES)
-        if form.is_valid(): 
-            form.save() 
-            messages.add_message(request, messages.INFO, 'successfuly uploaded！')
-            return redirect('/upload/file_upload/') 
-    else: 
-        form = File_UploadForm() 
-    return render(request, 'upload/html_for_upload.html', {'form' : form}) 
+	if 'qu_title' and 'login_username' in request.session:
+		qu_title = request.session['qu_title']
+		login_username = request.session['login_username']
+		print("file_upload_view: ", qu_title, login_username, "qu_step1")
+
+		if request.method == 'POST': 
+			form = File_UploadForm(request.POST, request.FILES)
+			if form.is_valid(): 
+				form.save()
+				messages.add_message(request, messages.INFO, 'successfuly uploaded！')
+				return redirect('/file_upload/') 
+		else: 
+			form = File_UploadForm() 
+		return render(request, 'upload/html_for_upload.html', {'form': form}) 
